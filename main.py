@@ -43,7 +43,7 @@ def progress_hook(d):
 
 # GUI Elements:
 root = tk.Tk()
-root.title("Media Site Downloader")
+root.title("YouTube to MP3/MP4 Converter")
 urlLabel = tk.Label(root, text="YouTube URL:")
 urlTextBox = tk.Entry(root, width=100)
 
@@ -57,15 +57,6 @@ downloadButton = tk.Button(root, text="Download", width=10, command=get_input)
 # Progress Bar
 progress_var = tk.DoubleVar()
 progress_bar = ttk.Progressbar(root, variable=progress_var, length=200)
-
-
-# Button to open file location browse
-browseButton = tk.Button(root, text="Browse", width=10, command=browse_destination)
-browseButton.grid(row=2, column=3)
-
-destination_var = tk.StringVar()
-destination_entry = tk.Entry(root, width=100, textvariable=destination_var, state="readonly")
-destination_entry.grid(row=2, column=1, columnspan=2)
 
 # GUI Formatting:
 root.geometry("800x480+400+240")
